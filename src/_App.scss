@@ -24,6 +24,17 @@
     font-weight: $weight;
 }
 
+@mixin flex($justify, $direction) {
+    display: flex;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin width-height($width, $height) {
+    width: $width;
+    height: $height;
+}
+
 $avenir: 'AvenirNextLTPro';
 
 * {
@@ -67,5 +78,13 @@ p {
 
     @include tablet {
             @include font-size-height-weight(1.4rem, 2.2rem, 400);
+        }
+}
+
+.labels {
+    @include font-size-height-weight(1rem, 2rem, 700);
+
+    @include tablet {
+            @include font-size-height-weight(1.2rem, 2rem, 700);
         }
 }
