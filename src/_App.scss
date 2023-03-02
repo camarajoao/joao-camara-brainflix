@@ -18,11 +18,19 @@
     }
 }
 
+@mixin font-size-height-weight($size, $lineheight, $weight) {
+    font-size: $size;
+    line-height: $lineheight;
+    font-weight: $weight;
+}
+
 $avenir: 'AvenirNextLTPro';
 
 * {
     font-family: $avenir, sans-serif;
     font-size: 62.5%;
+    margin: 0;
+    padding: 0;
 }
 
 $brainflix-black: #323232;
@@ -33,3 +41,31 @@ $brainflix-dark-black: #000000;
 $brainflix-dark-blue: #0065AD;
 $mercury: #E1E1E1;
 $alabaster: #FAFAFA;
+
+h1 {
+    @include font-size-height-weight(2.4rem, 3.2rem, 700);
+
+    @include tablet {
+        @include font-size-height-weight(3.3rem, 4.4rem, 700);
+    }
+}
+
+h2 {
+    @include font-size-height-weight(1.2rem, 2rem, 700);
+}
+
+h3 {
+    @include font-size-height-weight(1.3rem, 1.8rem, 700);
+
+    @include tablet {
+            @include font-size-height-weight(1.4rem, 2.2rem, 700);
+        }
+}
+
+p {
+    @include font-size-height-weight(1.3rem, 1.8rem, 400);
+
+    @include tablet {
+            @include font-size-height-weight(1.4rem, 2.2rem, 400);
+        }
+}
