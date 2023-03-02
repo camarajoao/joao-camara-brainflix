@@ -23,7 +23,7 @@ export default function Comments() {
                 <div class="conversation__posted">
                     <div class="conversation__posted-container">
                         <div class="conversation__posted-container-left">
-                            <img class="conversation__posted-avatar" alt="user avatar" />
+                            <img class="conversation__posted-avatar" />
                         </div>
                         <div class="conversation__posted-container-right">
                             <div class="conversation__posted-container-right-top">
@@ -37,7 +37,7 @@ export default function Comments() {
                     </div>
                     <div class="conversation__posted-container">
                         <div class="conversation__posted-container-left">
-                            <img class="conversation__posted-avatar" alt="user avatar" />
+                            <img class="conversation__posted-avatar" />
                         </div>
                         <div class="conversation__posted-container-right">
                             <div class="conversation__posted-container-right-top">
@@ -51,7 +51,7 @@ export default function Comments() {
                     </div>
                     <div class="conversation__posted-container">
                         <div class="conversation__posted-container-left">
-                            <img class="conversation__posted-avatar" alt="user avatar" />
+                            <img class="conversation__posted-avatar" />
                         </div>
                         <div class="conversation__posted-container-right">
                             <div class="conversation__posted-container-right-top">
