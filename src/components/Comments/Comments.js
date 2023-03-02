@@ -27,11 +27,11 @@ export default function Comments() {
                         </div>
                         <div class="conversation__posted-container-right">
                             <div class="conversation__posted-container-right-top">
-                                <p class="conversation__posted-name">Connor Walton</p>
-                                <p class="conversation__posted-date">02/16/2021</p>
+                                <p class="conversation__posted-name">Micheal Lyons</p>
+                                <p class="conversation__posted-date">08/09/2021</p>
                             </div>
                             <div class="conversation__posted-container-right-bottom">
-                                <p class="conversation__posted-text">This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.</p>
+                                <p class="conversation__posted-text">They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.</p>
                             </div>
                         </div>
                     </div>
@@ -41,11 +41,11 @@ export default function Comments() {
                         </div>
                         <div class="conversation__posted-container-right">
                             <div class="conversation__posted-container-right-top">
-                                <p class="conversation__posted-name">Emilie Beach</p>
-                                <p class="conversation__posted-date">01/08/2021</p>
+                                <p class="conversation__posted-name">Gary Wong</p>
+                                <p class="conversation__posted-date">07/15/2021</p>
                             </div>
                             <div class="conversation__posted-container-right-bottom">
-                                <p class="conversation__posted-text">I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.</p>
+                                <p class="conversation__posted-text">Every time I see him shred I feel so motivated to get off my couch and hop on my board. He's so talented! I wish I can ride like him one day so I can really enjoy myself!</p>
                             </div>
                         </div>
                     </div>
@@ -55,11 +55,11 @@ export default function Comments() {
                         </div>
                         <div class="conversation__posted-container-right">
                             <div class="conversation__posted-container-right-top">
-                                <p class="conversation__posted-name">Miles Acosta</p>
-                                <p class="conversation__posted-date">12/19/2020</p>
+                                <p class="conversation__posted-name">Theodore Duncan</p>
+                                <p class="conversation__posted-date">07/11/2021</p>
                             </div>
                             <div class="conversation__posted-container-right-bottom">
-                                <p class="conversation__posted-text">I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.</p>
+                                <p class="conversation__posted-text">How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!</p>
                             </div>
                         </div>
                     </div>
