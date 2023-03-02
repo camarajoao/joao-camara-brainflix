@@ -69,22 +69,22 @@ h3 {
     @include font-size-height-weight(1.3rem, 1.8rem, 700);
 
     @include tablet {
-            @include font-size-height-weight(1.4rem, 2.2rem, 700);
-        }
+        @include font-size-height-weight(1.4rem, 2.2rem, 700);
+    }
 }
 
 p {
     @include font-size-height-weight(1.3rem, 1.8rem, 400);
 
     @include tablet {
-            @include font-size-height-weight(1.4rem, 2.2rem, 400);
-        }
+        @include font-size-height-weight(1.4rem, 2.2rem, 400);
+    }
 }
 
 .labels {
     @include font-size-height-weight(1rem, 2rem, 700);
 
     @include tablet {
-            @include font-size-height-weight(1.2rem, 2rem, 700);
-        }
+        @include font-size-height-weight(1.2rem, 2rem, 700);
+    }
 }
