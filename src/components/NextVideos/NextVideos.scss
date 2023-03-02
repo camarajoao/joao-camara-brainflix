@@ -1,0 +1,31 @@
+@use "../../App.scss" as *;
+
+.nextVideos {
+    padding: 0 1.6rem;
+
+    &__title {
+        margin-bottom: 1.6rem;
+    }
+
+    &__videoContainer {
+        display: flex;
+        margin-bottom: 1.6rem;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &__hero {
+        width: 10rem;
+        margin-right: 1.6rem;
+    }
+
+    &__image {
+        width: 10rem;
+        height: 6rem;
+        border-radius: .4rem;
+    }
+}
