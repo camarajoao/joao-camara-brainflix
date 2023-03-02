@@ -33,6 +33,14 @@
             @include font-size-height-weight(1rem, 2rem, 400);
             color: $brainflix-black;
         }
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+
+        &:active {
+            border: .1rem solid $brainflix-black;
+        }
     }
 
     &__searchIcon {
