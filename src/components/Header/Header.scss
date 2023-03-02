@@ -1,0 +1,95 @@
+@use "../../App.scss" as *;
+
+.header {
+    padding: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    &__searchBar {
+        box-sizing: border-box;
+        position: relative;
+        margin: 1.6rem 1.6rem 1.6rem 0;
+        flex-grow: 1;
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        height: 3.6rem;
+        border-radius: .4rem;
+        padding: 1.2rem;
+        padding-left: 4.2rem;
+        width: 100%;
+        border: 1px solid $mercury;
+        background-color: $alabaster;
+
+        &::placeholder {
+            vertical-align: middle;
+            font-size: 1.2rem;
+            color: $brainflix-black;
+        }
+    }
+
+    &__searchIcon {
+        height: 100%;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        left: 1.2rem;
+        padding: 0;
+    }
+
+    &__avatarContainer {
+        width: 3.6rem;
+        height: 3.6rem;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        margin: 1.6rem 0;
+
+    }
+
+    &__avatarImage {
+        object-fit: cover;
+        height: 100%;
+        position: absolute;
+        left: -.5rem;
+    }
+
+    &__button {
+        height: 4rem;
+        width: 100%;
+        border-radius: .4rem;
+        cursor: pointer;
+        border: none;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        background-color: $brainflix-blue;
+        color: $white;
+        box-sizing: border-box;
+        padding: 0 1.2rem;
+        position: relative;
+    }
+
+    &__uploadContainer {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        left: 1.2rem;
+        top: 1rem;
+
+
+    }
+
+    &__upload {
+        height: 2rem;
+    }
+}
