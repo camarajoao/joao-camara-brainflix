@@ -13,13 +13,13 @@ export default function Media() {
                 <div className="media__detailsContainer">
                     <h1 className="media__title">BMX Rampage: 2021 Highlights</h1>
                 </div>
-                <div className="media__detailsContainer media__detailsContainer--padding">
+                <div className="media__detailsContainer media__detailsContainer--padding media__detailsContainer--paddingBottom media__detailsContainer--borderBottom">
                     <div className="media__details">
-                        <h3>By Red Crow</h3>
+                        <h3 className="media__detailsHeader">By Red Crow</h3>
                         <p className="media__date">07/11/2021</p>
                     </div>
-                    <div className="media__details">
-                        <div className="media__public">
+                    <div className="media__details media__details--justify">
+                        <div className="media__public media__public--margin">
                             <img className="media__publicIcon media__publicIcon--margin" src={views} alt="views icon" />
                             <p className="media__publicNumber">1,001,023</p>
                         </div>
@@ -29,7 +29,7 @@ export default function Media() {
                         </div>
                     </div>
                 </div>
-                <div className="media__detailsContainer--padding">
+                <div className="media__detailsContainer--padding media__detailsContainer--paddingTablet">
                     <p>On a gusty day in Southern Utah, a group of 25
                         daring mountain bikers blew the doors off what
                         is possible on two wheels, unleashing some of
