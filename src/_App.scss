@@ -88,3 +88,23 @@ p {
         @include font-size-height-weight(1.2rem, 2rem, 700);
     }
 }
+
+.App__container {
+    @include desktop {
+        display: flex;
+        padding: 0 9.6rem;
+    }
+}
+
+.App__Interaction {
+    @include desktop {
+        width: 70%;
+    }
+}
+
+.App__nextVideos {
+    @include desktop {
+        border-left: .1rem solid $mercury;
+        width: 30%;
+    }
+}
