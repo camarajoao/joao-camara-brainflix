@@ -11,6 +11,10 @@
         justify-content: flex-end;
     }
 
+    @include desktop {
+        padding: 1.6rem 16rem;
+    }
+
     &__logoContainer {
         width: 100%;
         text-align: center;
