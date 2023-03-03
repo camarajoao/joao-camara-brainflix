@@ -1,27 +1,17 @@
 @use "../../App.scss" as *;
 
 .media {
+    padding: 0 1.6rem;
+    padding-top: 2.4rem;
 
-    &__video {
-        width: 100%;
-
-        &::-webkit-media-controls-play-button {
-            background-image: url("../../assets/icons/play.svg");
-        }
+    @include tablet {
+        padding: 0 2.4rem;
+        padding-top: 3.6rem;
     }
 
-    &__container {
-        padding: 0 1.6rem;
-        padding-top: 2.4rem;
-
-        @include tablet {
-            padding: 0 2.4rem;
-            padding-top: 3.6rem;
-        }
-
-        @include desktop {
-            padding-left: 16rem;
-        }
+    @include desktop {
+        padding: 0;
+        padding-top: 3.6rem;
     }
 
     &__detailsContainer {
@@ -37,6 +27,10 @@
         &--padding {
             padding: 1.6rem 0;
 
+            @include desktop {
+                padding-right: 2.4rem;
+            }
+
             &Bottom {
                 @include tablet {
                     padding-bottom: .8rem;
@@ -46,6 +40,10 @@
             &Tablet {
                 @include tablet {
                     padding: 2.4rem 0;
+                }
+
+                @include desktop {
+                    padding-right: 2.4rem;
                 }
             }
         }
