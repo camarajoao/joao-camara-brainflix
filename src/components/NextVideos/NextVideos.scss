@@ -3,8 +3,19 @@
 .nextVideos {
     padding: 0 1.6rem;
 
+
+    @include tablet {
+        padding: 0;
+        padding-left: 2.4rem;
+        width: 40%;
+    }
+
     &__title {
         margin-bottom: 1.6rem;
+
+        @include tablet {
+            margin-bottom: 2.4rem;
+        }
     }
 
     &__videoContainer {
