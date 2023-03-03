@@ -10,6 +10,12 @@
         width: 40%;
     }
 
+    @include desktop {
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     &__title {
         margin-bottom: 1.6rem;
 
