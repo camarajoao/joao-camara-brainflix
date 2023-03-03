@@ -3,12 +3,28 @@
 .header {
     padding: 1.6rem;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 
-    &__logo {
+    @include tablet {
+        padding: 1.6rem 2.4rem;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+
+    &__logoContainer {
         width: 100%;
         text-align: center;
+
+        @include tablet {
+            @include width-height(12rem, 100%);
+            align-self: center;
+            text-align: left;
+            flex-grow: 1
+        }
+    }
+
+    &__logo {
+        @include width-height(12rem, 2.5rem);
     }
 
     &__searchBar {
@@ -16,15 +32,19 @@
         position: relative;
         margin: 1.6rem 1.6rem 1.6rem 0;
         flex-grow: 1;
+
+        @include tablet {
+            flex-grow: 0;
+            margin: 0;
+        }
     }
 
     &__input {
         @include font-size-height-weight(1rem, 2rem, 400);
-        height: 3.6rem;
+        @include width-height(100%, 3.6rem);
         border-radius: .4rem;
         padding: 1.2rem;
         padding-left: 4.2rem;
-        width: 100%;
         border: 1px solid $mercury;
         background-color: $alabaster;
 
@@ -41,6 +61,10 @@
         &:active {
             border: .1rem solid $brainflix-black;
         }
+
+        @include tablet {
+            @include width-height(24rem, 4rem);
+        }
     }
 
     &__searchIcon {
@@ -54,26 +78,40 @@
     }
 
     &__avatarContainer {
-        width: 3.6rem;
-        height: 3.6rem;
+        @include width-height(3.6rem, 3.6rem);
         border-radius: 50%;
         overflow: hidden;
         position: relative;
         margin: 1.6rem 0;
 
+        @include tablet {
+            display: none;
+        }
     }
 
     &__avatarImage {
         object-fit: cover;
-        height: 100%;
+        @include width-height(null, 100%);
         position: absolute;
         left: -.5rem;
     }
 
+    &__avatarSecondContainer {
+        display: none;
+        @include width-height(4rem, 4rem);
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+
+        @include tablet {
+            display: initial;
+
+        }
+    }
+
     &__button {
         @include font-size-height-weight(1rem, 2rem, 700);
-        height: 4rem;
-        width: 100%;
+        @include width-height(100%, 4rem);
         border-radius: .4rem;
         cursor: pointer;
         border: none;
@@ -82,6 +120,12 @@
         box-sizing: border-box;
         padding: 0 1.2rem;
         position: relative;
+
+        @include tablet {
+            @include width-height(15rem, 4rem);
+            margin: 0 1.6rem;
+
+        }
     }
 
     &__uploadContainer {
@@ -91,8 +135,6 @@
         position: absolute;
         left: 1.2rem;
         top: 1rem;
-
-
     }
 
     &__upload {
