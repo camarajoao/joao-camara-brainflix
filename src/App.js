@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <VideoPlayer selectedVideo={selectedVideo}  />
+      <VideoPlayer selectedVideo={selectedVideo} />
       <div className="App__container">
         <div className="App__Interaction">
           <Media selectedVideo={selectedVideo} />
