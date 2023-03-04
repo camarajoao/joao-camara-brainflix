@@ -2,11 +2,10 @@ import "./Comments.scss";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import addCommentIcon from "../../assets/icons/add_comment.svg"
 
-export default function Comments() {
-
+export default function Comments({ selectedVideo }) {
     return (
         <div className="conversation">
-            <h2 className="conversation__title">3 Comments</h2>
+            <h3 className="conversation__title">{selectedVideo.comments.length} Comments</h3>
             <div className="conversation__container">
                 <div className="conversation__post-comment">
                     <div className="conversation__left">

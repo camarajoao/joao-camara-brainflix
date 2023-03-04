@@ -1,7 +1,6 @@
 import "./NextVideosItem.scss";
 
 export default function NextVideosItem({ video, selectVideo }) {
-    console.log(video);
     return (
         <div className="nextVideosItem" onClick={() => { selectVideo(video.id) }}>
             <div className="nextVideosItem__hero">

@@ -30,8 +30,8 @@ function App() {
       <VideoPlayer selectedVideo={selectedVideo}  />
       <div className="App__container">
         <div className="App__Interaction">
-          <Media />
-          <Comments />
+          <Media selectedVideo={selectedVideo} />
+          <Comments selectedVideo={selectedVideo} />
         </div>
         <div className="App__nextVideos">
           <NextVideos videos={filteredVideos} selectVideo={handleSelectVideo} />
