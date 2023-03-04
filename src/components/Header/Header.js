@@ -8,7 +8,7 @@ export default function Header() {
     return (
         <header className="header">
             <div className="header__logoContainer">
-                <img className="header__logo" src={brainFlixLogo} alt="brainflix logo" />
+                <a href="#"><img className="header__logo" src={brainFlixLogo} alt="brainflix logo" /></a>
             </div>
             <div className="header__searchBar">
                 <input className="header__input" type="search" placeholder="Search" />
