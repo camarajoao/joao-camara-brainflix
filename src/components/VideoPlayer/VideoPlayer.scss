@@ -1,0 +1,8 @@
+@use "../../App.scss" as *;
+
+video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: $brainflix-dark-black;
+    cursor: pointer;
+}
