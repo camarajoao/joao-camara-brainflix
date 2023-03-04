@@ -14,7 +14,7 @@ export default function Comments() {
                     </div>
                     <div className="conversation__right">
                         <form className="conversation__form">
-                            <label className="form__comment labels" for="comment">JOIN THE CONVERSATION</label>
+                            <label className="form__comment labels" htmlFor="comment">JOIN THE CONVERSATION</label>
                             <textarea className="form__comment-input" name="comment" id="comment" placeholder="Add a new comment"></textarea>
                             <button className="form__button" type="submit"><span className="form__commentIconContainer"><img src={addCommentIcon} className="form__commentIcon" alt="addcomment-icon" /></span>COMMENT</button>
                         </form>
