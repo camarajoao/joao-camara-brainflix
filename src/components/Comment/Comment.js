@@ -1,7 +1,6 @@
 import "./Comment.scss";
 
 export default function Comment({ comment }) {
-    console.log(comment);
 
     const date = new Date(comment.timestamp);
     const day = ("0" + date.getDate()).slice(-2);
@@ -10,17 +9,17 @@ export default function Comment({ comment }) {
     const timestamp = `${month}/${day}/${year}`
 
     return (
-        <div className="conversation__posted-container">
-            <div className="conversation__posted-container-left">
-                <img className="conversation__posted-avatar" />
+        <div className="comment">
+            <div className="comment__avatar">
+                <img className="comment__avatar-image" />
             </div>
-            <div className="conversation__posted-container-right">
-                <div className="conversation__posted-container-right-top">
-                    <p className="conversation__posted-name">{comment.name}</p>
-                    <p className="conversation__posted-date">{timestamp}</p>
+            <div className="comment__posted">
+                <div className="comment__posted-information">
+                    <p className="comment__posted-information-name">{comment.name}</p>
+                    <p className="comment__posted-information-date">{timestamp}</p>
                 </div>
-                <div className="conversation__posted-container-right-bottom">
-                    <p className="conversation__posted-text">{comment.comment}</p>
+                <div className="comment__posted-content">
+                    <p className="comment__posted-content-text">{comment.comment}</p>
                 </div>
             </div>
         </div>
