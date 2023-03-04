@@ -82,11 +82,7 @@ p {
 }
 
 .labels {
-    @include font-size-height-weight(1rem, 2rem, 700);
-
-    @include tablet {
-        @include font-size-height-weight(1.2rem, 2rem, 700);
-    }
+    @include font-size-height-weight(1.3rem, 2rem, 700);
 }
 
 .App__container {
