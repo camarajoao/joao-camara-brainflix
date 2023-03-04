@@ -3,7 +3,6 @@
 .nextVideos {
     padding: 0 1.6rem;
 
-
     @include tablet {
         padding: 0;
         padding-left: 2.4rem;
@@ -18,31 +17,14 @@
 
     &__title {
         margin-bottom: 1.6rem;
+        color: $silver;
 
         @include tablet {
             margin-bottom: 2.4rem;
         }
-    }
 
-    &__videoContainer {
-        display: flex;
-        margin-bottom: 1.6rem;
-    }
-
-    &__description {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    &__hero {
-        width: 10rem;
-        margin-right: 1.6rem;
-    }
-
-    &__image {
-        width: 10rem;
-        height: 6rem;
-        border-radius: .4rem;
+        @include desktop {
+            margin-top: 3.6rem;
+        }
     }
 }
