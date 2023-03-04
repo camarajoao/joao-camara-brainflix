@@ -1,0 +1,59 @@
+@use "../../App.scss" as *;
+
+.comment {
+    display: flex;
+    position: relative;
+    border-bottom: .1rem solid $mercury;
+    padding: 1.6rem 0;
+
+    @include desktop {
+        padding-left: 1.6rem;
+        padding-right: 2.4rem;
+        border-bottom: none;
+        border-top: .1rem solid $mercury;
+    }
+
+
+    &__avatar {
+        @include width-height(3.6rem, 3.6rem);
+        margin-right: 1.6rem;
+        border-radius: 50%;
+        background-color: $mercury;
+
+        @include tablet {
+            @include width-height(4rem, 4rem);
+            margin-right: 2.4rem;
+        }
+
+        &-image {
+            @include width-height(3.6rem, 3.6rem);
+            border-radius: 50%;
+
+            @include tablet {
+                @include width-height(4rem, 4rem);
+            }
+
+        }
+    }
+
+    &__posted {
+        @include flex(null, column);
+        width: 100%;
+
+        &-information {
+            @include flex(space-between, row);
+
+            &-name {
+                font-weight: 700;
+            }
+
+            &-date {
+                color: $silver;
+            }
+        }
+
+        &-content {
+            margin-top: .8rem;
+        }
+    }
+}
