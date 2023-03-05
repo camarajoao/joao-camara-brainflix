@@ -7,21 +7,21 @@ import uploadIcon from "../../assets/icons/upload.svg"
 export default function Header() {
     return (
         <header className="header">
-            <div className="header__logoContainer">
-                <a href="#"><img className="header__logo" src={brainFlixLogo} alt="brainflix logo" /></a>
+            <div className="header__logo">
+                <a href="#"><img className="header__logo-image" src={brainFlixLogo} alt="brainflix logo" /></a>
             </div>
-            <div className="header__searchBar">
-                <input className="header__input" type="search" placeholder="Search" />
-                <button className="header__searchIcon" type="submit">
+            <div className="header__search">
+                <input className="header__search-input" type="search" placeholder="Search" />
+                <button className="header__search-icon" type="submit">
                     <img src={searchIcon} alt="search-icon" />
                 </button>
             </div>
-            <div className="header__avatarContainer">
-                <img src={avatar} className="header__avatarImage" alt="mohan muruge" />
+            <div className="header__avatar">
+                <img src={avatar} className="header__avatar-image" alt="mohan muruge" />
             </div>
-            <button className="header__button" type="submit"><span className="header__uploadContainer"><img src={uploadIcon} className="header__upload" /></span>UPLOAD</button>
-            <div className="header__avatarSecondContainer">
-                <img src={avatar} className="header__avatarImage" alt="mohan muruge" />
+            <button className="header__button" type="submit"><span className="header__button-submit"><img src={uploadIcon} className="header__button-submit-icon" alt="upload-icon" /></span>UPLOAD</button>
+            <div className="header__avatar-extra">
+                <img src={avatar} className="header__avatar-image" alt="mohan muruge" />
             </div>
         </header>
     )

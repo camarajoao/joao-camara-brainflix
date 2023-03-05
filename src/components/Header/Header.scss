@@ -15,7 +15,7 @@
         padding: 1.6rem 9.6rem;
     }
 
-    &__logoContainer {
+    &__logo {
         width: 100%;
         text-align: center;
 
@@ -25,13 +25,13 @@
             text-align: left;
             flex-grow: 1
         }
+
+        &-image {
+            @include width-height(12rem, 2.5rem);
+        }
     }
 
-    &__logo {
-        @include width-height(12rem, 2.5rem);
-    }
-
-    &__searchBar {
+    &__search {
         box-sizing: border-box;
         position: relative;
         margin: 1.6rem 1.6rem 1.6rem 0;
@@ -41,55 +41,57 @@
             flex-grow: 0;
             margin: 0;
         }
-    }
 
-    &__input {
-        @include font-size-height-weight(1rem, 2rem, 400);
-        @include width-height(100%, 3.6rem);
-        border-radius: .4rem;
-        padding: 1.2rem;
-        padding-left: 4.2rem;
-        border: 1px solid $mercury;
-        background-color: $alabaster;
-
-        @include tablet {
-            @include font-size-height-weight(1.4rem, 1.4rem, 400);
-        }
-
-        &::placeholder {
-            vertical-align: middle;
+        &-input {
             @include font-size-height-weight(1rem, 2rem, 400);
-            color: $brainflix-black;
+            @include width-height(100%, 3.6rem);
+            border-radius: .4rem;
+            padding: 1.2rem;
+            padding-left: 4.2rem;
+            border: 1px solid $mercury;
+            background-color: $alabaster;
 
             @include tablet {
                 @include font-size-height-weight(1.4rem, 1.4rem, 400);
             }
+
+            &::placeholder {
+                @include font-size-height-weight(1rem, 2rem, 400);
+                color: $brainflix-black;
+
+                @include tablet {
+                    @include font-size-height-weight(1.4rem, 1.4rem, 400);
+                }
+            }
+
+            &:focus::placeholder {
+                color: transparent;
+            }
+
+            &:focus {
+                border: .2rem solid $brainflix-blue;
+                outline: none;
+            }
+
+            @include tablet {
+                @include width-height(24rem, 4rem);
+            }
         }
 
-        &:focus::placeholder {
-            color: transparent;
-        }
-
-        &:active {
-            border: .1rem solid $brainflix-black;
-        }
-
-        @include tablet {
-            @include width-height(24rem, 4rem);
+        &-icon {
+            height: 100%;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            left: 1.2rem;
+            padding: 0;
         }
     }
 
-    &__searchIcon {
-        height: 100%;
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
-        position: absolute;
-        left: 1.2rem;
-        padding: 0;
-    }
 
-    &__avatarContainer {
+
+    &__avatar {
         @include width-height(3.6rem, 3.6rem);
         border-radius: 50%;
         overflow: hidden;
@@ -99,58 +101,41 @@
         @include tablet {
             display: none;
         }
-    }
 
-    &__avatarImage {
-        object-fit: cover;
-        @include width-height(null, 100%);
-        position: absolute;
-        left: -.5rem;
-    }
+        &-extra {
+            display: none;
+            @include width-height(4rem, 4rem);
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
 
-    &__avatarSecondContainer {
-        display: none;
-        @include width-height(4rem, 4rem);
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
+            @include tablet {
+                display: initial;
 
-        @include tablet {
-            display: initial;
+            }
+        }
 
+        &-image {
+            object-fit: cover;
+            @include width-height(null, 100%);
+            position: absolute;
+            left: -.5rem;
         }
     }
 
     &__button {
-        @include font-size-height-weight(1rem, 2rem, 700);
-        @include width-height(100%, 4rem);
-        border-radius: .4rem;
-        cursor: pointer;
-        border: none;
-        background-color: $brainflix-blue;
-        color: $white;
-        box-sizing: border-box;
-        padding: 0 1.2rem;
-        position: relative;
+        @extend .button;
 
         @include tablet {
-            @include font-size-height-weight(1.2rem, 1.2rem, 700);
-            @include width-height(15rem, 4rem);
             margin: 0 1.6rem;
-
         }
-    }
 
-    &__uploadContainer {
-        display: inline-block;
-        width: 2rem;
-        height: 2rem;
-        position: absolute;
-        left: 1.2rem;
-        top: 1rem;
-    }
+        &-submit {
+            @extend .button-submit;
 
-    &__upload {
-        height: 2rem;
+            &-icon {
+                @extend .button-submit-icon;
+            }
+        }
     }
 }
