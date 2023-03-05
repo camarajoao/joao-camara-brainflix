@@ -13,26 +13,32 @@ export default function Media({ selectedVideo }) {
 
     return (
         <div className="media">
-            <div className="media__detailsContainer">
-                <h1 className="media__title">{selectedVideo.title}</h1>
+            <div className="media__title">
+                <h1 className="media__title-content">{selectedVideo.title}</h1>
             </div>
-            <div className="media__detailsContainer media__detailsContainer--padding media__detailsContainer--paddingBottom media__detailsContainer--borderBottom">
-                <div className="media__details">
-                    <h3 className="media__detailsHeader">By {selectedVideo.channel}</h3>
-                    <p className="media__date">{timestamp}</p>
+            <div className="media__container">
+
+                <div className="media__upload">
+                    <h3 className="media__upload-channel">By {selectedVideo.channel}</h3>
+                    <p className="media__upload-date">{timestamp}</p>
                 </div>
-                <div className="media__details media__details--justify">
+
+                <div className="media__interaction">
+
                     <div className="media__public media__public--margin">
-                        <img className="media__publicIcon media__publicIcon--margin" src={views} alt="views icon" />
-                        <p className="media__publicNumber">{selectedVideo.views}</p>
+                        <img className="media__public-icon media__public-icon--margin" src={views} alt="views icon" />
+                        <p className="media__public-number">{selectedVideo.views}</p>
                     </div>
+
                     <div className="media__public">
-                        <img className="media__publicIcon" src={likes} alt="likes icon" />
-                        <p className="media__publicNumber">{selectedVideo.likes}</p>
+                        <img className="media__public-icon" src={likes} alt="likes icon" />
+                        <p className="media__public-number">{selectedVideo.likes}</p>
                     </div>
+
                 </div>
             </div>
-            <div className="media__detailsContainer--padding media__detailsContainer--paddingTablet">
+
+            <div className="media__description">
                 <p>{selectedVideo.description}</p>
             </div>
         </div>

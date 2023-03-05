@@ -1,20 +1,17 @@
 @use "../../App.scss" as *;
 
 .media {
-    padding: 0 1.6rem;
-    padding-top: 2.4rem;
+    padding: 2.4rem 1.6rem 0 1.6rem;
 
     @include tablet {
-        padding: 0 2.4rem;
-        padding-top: 3.6rem;
+        padding: 3.6rem 2.4rem 0 2.4rem;
     }
 
     @include desktop {
-        padding: 0;
-        padding-top: 3.6rem;
+        padding: 3.6rem 0 0 0;
     }
 
-    &__detailsContainer {
+    &__title {
         padding-bottom: 1.6rem;
         border-bottom: .1rem solid $mercury;
         display: flex;
@@ -23,72 +20,59 @@
             padding: 0;
             border-bottom: none;
         }
-
-        &--padding {
-            padding: 1.6rem 0;
-
-            @include desktop {
-                padding-right: 2.4rem;
-            }
-
-            &Bottom {
-                @include tablet {
-                    padding-bottom: .8rem;
-                }
-            }
-
-            &Tablet {
-                @include tablet {
-                    padding: 2.4rem 0;
-                }
-
-                @include desktop {
-                    padding-right: 2.4rem;
-                }
-            }
-        }
-
-        &--borderBottom {
-            @include tablet {
-                border-bottom: .1rem solid $mercury;
-            }
-        }
     }
 
-    &__details {
+    &__upload {
         flex-direction: column;
         flex-grow: 1;
 
         @include tablet {
-            display: flex;
-            flex-direction: row;
+            @include flex(null, row);
             vertical-align: middle;
             align-items: center;
         }
 
-        &Header {
+        &-channel {
             margin-right: 2.4rem;
         }
 
-        &--justify {
+        &-date {
+            color: $silver;
+            margin-top: 1.6rem;
+
             @include tablet {
-                justify-content: flex-end;
+                margin: 0;
             }
         }
     }
 
-    &__date {
-        color: $silver;
-        margin-top: 1.6rem;
+    &__interaction {
+        flex-direction: column;
+        flex-grow: 1;
 
         @include tablet {
-            margin: 0;
+            @include flex(flex-end, row);
+            vertical-align: middle;
+            align-items: center;
+        }
+    }
+
+    &__container {
+        display: flex;
+        padding: 1.6rem 0;
+        border-bottom: .1rem solid $mercury;
+
+        @include tablet {
+            padding: .8rem 0;
+        }
+
+        @include desktop {
+            padding-right: 2.4rem;
         }
     }
 
     &__public {
-        display: flex;
-        flex-direction: row;
+        @include flex(null, row);
 
         &--margin {
             @include tablet {
@@ -96,11 +80,10 @@
             }
         }
 
-        &Icon {
+        &-icon {
             margin-right: 1.2rem;
 
             @include tablet {
-                margin: 0;
                 margin-right: .8rem;
             }
 
@@ -114,8 +97,20 @@
             }
         }
 
-        &Number {
+        &-number {
             color: $silver;
+        }
+    }
+
+    &__description {
+        padding: 1.6rem 0;
+
+        @include tablet {
+            padding: 2.4rem 0;
+        }
+
+        @include desktop {
+            padding-right: 2.4rem;
         }
     }
 }
