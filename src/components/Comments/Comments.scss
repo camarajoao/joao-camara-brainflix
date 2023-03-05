@@ -1,28 +1,6 @@
 @use "../../App.scss" as *;
 
-.form-input-style {
-    @include font-size-height-weight(1rem, 2rem, 400);
-    width: 100%;
-    border-radius: .4rem;
-    padding: 1.2rem;
-    box-sizing: border-box;
-    border: .1rem solid $mercury;
-    background-color: $alabaster;
-
-    &:focus::placeholder {
-        color: transparent;
-    }
-
-    &::placeholder {
-        color: $brainflix-black;
-    }
-
-    &:active {
-        border: .1rem solid $brainflix-black;
-    }
-}
-
-.conversation {
+.comments {
     padding: 0 1.6rem;
 
     @include tablet {
@@ -31,6 +9,7 @@
 
     @include desktop {
         padding: 0;
+        margin-top: 2.4rem;
     }
 
     &__container {
@@ -39,13 +18,9 @@
         @include tablet {
             padding: 1.6rem 0 2.4rem 0;
         }
-
-        // @include desktop {
-        //     padding: 0 25.6rem;
-        // }
     }
 
-    &__post-comment {
+    &__user {
         display: flex;
         border-bottom: .1rem solid $mercury;
 
@@ -53,19 +28,37 @@
             padding-bottom: 2.4rem;
         }
 
-                @include desktop {
-                    padding-left: 1.6rem;
-                    padding-right: 2.4rem;
-                }
+        @include desktop {
+            padding-left: 1.6rem;
+            padding-right: 2.4rem;
+        }
+
+        &-avatar {
+            @include width-height(3.6rem, 3.6rem);
+            margin-top: 1.6rem;
+            margin-right: 1.6rem;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            background-color: $silver;
+
+            @include tablet {
+                @include width-height(4rem, 4rem);
+                margin: 0;
+                margin-right: 2.4rem;
+                align-self: flex-end;
+            }
+
+            &-image {
+                height: 100%;
+                position: absolute;
+                left: -.5rem;
+            }
+        }
     }
 
-    &__icon {
-        object-fit: cover;
-        height: 100%;
-        position: absolute;
-        left: -.5rem;
-
-        @include tablet {}
+    &__user-post {
+        flex-grow: 1;
     }
 
     &__form {
@@ -76,99 +69,67 @@
             flex-wrap: wrap;
         }
 
-        .form__comment {
+        &-label {
             color: $silver;
 
             @include tablet {
                 width: 100%;
             }
-
-            &-input {
-                @extend .form-input-style;
-                height: 10rem;
-                resize: none;
-
-                @include tablet {
-                    height: 4rem;
-                    font-size: 1.4rem;
-                    line-height: 1.4rem;
-                    overflow: hidden;
-                    width: 24rem;
-                    flex-grow: 1;
-                    margin-right: 2.4rem;
-                }
-
-                &::placeholder {
-                    @include tablet {
-                        font-size: 1.4rem;
-                    }
-                }
-            }
         }
 
-        .form__button {
-            @include font-size-height-weight(1rem, 2rem, 700);
-            height: 4rem;
-            width: 100%;
+        &-input {
+            @include font-size-height-weight(1rem, 2rem, 400);
+            @include width-height(100%, 10rem);
+            resize: none;
             border-radius: .4rem;
-            cursor: pointer;
-            border: none;
-            background-color: $brainflix-blue;
-            color: $white;
+            padding: 1.2rem;
             box-sizing: border-box;
-            padding: 0 1.2rem;
-            margin: 1.6rem 0;
-            position: relative;
+            border: .1rem solid $mercury;
+            background-color: $alabaster;
 
-            &:hover {
-                background-color: $brainflix-dark-blue;
+            &:focus::placeholder {
+                color: transparent;
+            }
+
+            &::placeholder {
+                color: $brainflix-black;
+            }
+
+            &:focus {
+                border: .2rem solid $brainflix-blue;
+                outline: none;
             }
 
             @include tablet {
-                padding: 1.4rem 3.2rem;
-                width: 15rem;
-                align-self: flex-end;
-                margin: 0;
-                @include font-size-height-weight(1.2rem, 1.2rem, 700);
+                @include width-height(24rem, 4rem);
+                @include font-size-height-weight(1.4rem, 1.4rem, 400);
+                overflow: hidden;
+                flex-grow: 1;
+                margin-right: 2.4rem;
+            }
+
+            &::placeholder {
+                @include tablet {
+                    font-size: 1.4rem;
+                }
             }
         }
 
-        .form__commentIconContainer {
-            display: inline-block;
-            width: 2rem;
-            height: 2rem;
-            position: absolute;
-            left: 1.2rem;
-            top: 1rem;
+        &-button {
+            @extend .button;
+            margin: 1.6rem 0;
 
+            @include tablet {
+                margin: 0;
+            }
 
+            &-submit {
+                @extend .button-submit;
+
+                &-icon {
+                    @extend .button-submit-icon;
+                }
+            }
         }
-
-        .form__commentIcon {
-            height: 2rem;
-        }
-
     }
-
-    &__left {
-        @include width-height(3.6rem, 3.6rem);
-        margin-top: 1.6rem;
-        margin-right: 1.6rem;
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
-        background-color: $silver;
-
-        @include tablet {
-            @include width-height(4rem, 4rem);
-            margin: 0;
-            margin-right: 2.4rem;
-            align-self: flex-end;
-        }
-
-    }
-
-    &__right {
-        flex-grow: 1;
-    }    
 }
