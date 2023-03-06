@@ -1,13 +1,15 @@
-import "./components/Header/Header.scss";
-import Header from "./components/Header/Header";
-import VideoPlayer from "./components/VideoPlayer/VideoPlayer"
-import Media from "./components/Media/Media";
-import Comments from "./components/Comments/Comments";
-import NextVideos from "./components/NextVideos/NextVideos";
+import "./_App.scss";
+
+import { useState } from "react";
+import axios from 'axios';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import videosData from "./data/videos.json";
 import videoDetailsData from "./data/video-details.json";
-import { useState } from "react";
 
+import Header from "./components/Header/Header";
+import Home from "./pages/Home/Home";
+import VideoUpload from "./pages/VideoUpload/VideoUpload";
 
 
 function App() {
@@ -25,19 +27,15 @@ function App() {
 
 
   return (
-    <div className="App">
-      <Header />
-      <VideoPlayer selectedVideo={selectedVideo} />
-      <div className="App__container">
-        <div className="App__Interaction">
-          <Media selectedVideo={selectedVideo} />
-          <Comments selectedVideo={selectedVideo} />
-        </div>
-        <div className="App__nextVideos">
-          <NextVideos videos={filteredVideos} selectVideo={handleSelectVideo} />
-        </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home videos={filteredVideos} selectVideo={handleSelectVideo} selectedVideo={selectedVideo}/>} />
+          <Route path="/upload" element={<VideoUpload />} />
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
