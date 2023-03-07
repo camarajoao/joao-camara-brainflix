@@ -1,9 +1,9 @@
 import Upload from "../../components/Upload/Upload"
 
-export default function() {
+export default function VideoUpload() {
     return (
         <>
-        <Upload />
+            <Upload />
         </>
     )
 }
