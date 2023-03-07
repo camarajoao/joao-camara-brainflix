@@ -9,6 +9,7 @@ import videoDetailsData from "./data/video-details.json";
 
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
+import Videos from "./pages/Videos/Videos";
 import VideoUpload from "./pages/VideoUpload/VideoUpload";
 
 
@@ -31,7 +32,8 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<Home videos={filteredVideos} selectVideo={handleSelectVideo} selectedVideo={selectedVideo}/>} />
+          <Route path="/" element={<Home videos={filteredVideos} selectVideo={handleSelectVideo} selectedVideo={selectedVideo} />} />
+          <Route path="/videos" element={<Videos videos={filteredVideos} selectVideo={handleSelectVideo} selectedVideo={selectedVideo} />} />
           <Route path="/upload" element={<VideoUpload />} />
         </Routes>
       </div>
