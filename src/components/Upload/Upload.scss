@@ -1,1 +1,223 @@
 @use "../../App.scss" as *;
+
+.upload {
+    @include flex(null, column);
+    padding: 1.6rem;
+    padding-top: 2.4rem;
+    border-top: .1rem solid $mercury;
+
+    @include tablet {
+        padding: 2.4rem;
+        padding-top: 3.6rem;
+    }
+
+    @include desktop {
+        padding: 3.6rem 9.6rem;
+    }
+
+    &__title {
+        margin-bottom: 2.4rem;
+
+        @include tablet {
+            padding-bottom: 2.4rem;
+            border-bottom: .1rem solid $mercury;
+        }
+    }
+
+    &__form {
+        &--desktop {
+            @include desktop {
+                @include flex(null, row);
+                padding-bottom: 2.4rem;
+                border-bottom: .1rem solid $mercury;
+                margin-bottom: 2.4rem;
+            }
+        }
+
+        &-thumbnail {
+            margin-bottom: 1.6rem;
+
+            @include tablet {
+                @include flex(null, column);
+            }
+
+            @include desktop {
+                width: 45%;
+                margin: 0;
+            }
+
+            &-label {
+                color: $silver;
+            }
+
+            &-image {
+                width: 100%;
+                border-radius: .4rem;
+
+                @include tablet {
+                    width: 50%;
+                }
+
+                @include desktop {
+                    width: 100%;
+                }
+            }
+        }
+
+        &-details {
+            @include tablet {
+                @include flex(null, column);
+                width: 100%;
+                padding-bottom: 2.4rem;
+                margin-bottom: 2.4rem;
+                border-bottom: .1rem solid $mercury;
+
+                @include desktop {
+                    flex-grow: 1;
+                    justify-content: space-between;
+                    padding: 0;
+                    margin: 0 0 0 2.4rem;
+                    border-bottom: none;
+                }
+
+                &--flexgrow {
+                    @include desktop {
+                        @include flex(null, column);
+                        flex-grow: 1;
+                    }
+                }
+            }
+
+            &-input {
+                @include font-size-height-weight(1.3rem, 2rem, 400);
+                @include width-height(100%, 3.6rem);
+                margin-bottom: 1.6rem;
+                border-radius: .4rem;
+                padding: 1.2rem;
+                box-sizing: border-box;
+                border: .1rem solid $mercury;
+                background-color: $alabaster;
+
+                &:focus::placeholder {
+                    color: transparent;
+                }
+
+                &::placeholder {
+                    color: $brainflix-black;
+                }
+
+                &:focus {
+                    border: .2rem solid $brainflix-blue;
+                    outline: none;
+                }
+
+                @include tablet {
+                    @include width-height(100%, 4rem);
+                    @include font-size-height-weight(1.4rem, 1.4rem, 400);
+                    overflow: hidden;
+                }
+
+                &::placeholder {
+                    @include tablet {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+
+            &-textarea {
+                @include font-size-height-weight(1.3rem, 2rem, 400);
+                @include width-height(100%, 10rem);
+                margin-bottom: 1.6rem;
+                resize: none;
+                border-radius: .4rem;
+                padding: 1.2rem;
+                box-sizing: border-box;
+                border: .1rem solid $mercury;
+                background-color: $alabaster;
+                overflow: hidden;
+
+                &:focus::placeholder {
+                    color: transparent;
+                }
+
+                &::placeholder {
+                    color: $brainflix-black;
+                }
+
+                &:focus {
+                    border: .2rem solid $brainflix-blue;
+                    outline: none;
+                }
+
+                @include tablet {
+                    @include width-height(100%, 10rem);
+                    @include font-size-height-weight(1.4rem, 1.4rem, 400);
+                    margin: 0;
+                }
+
+                &::placeholder {
+                    @include tablet {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                @include desktop {
+                    flex-grow: 1;
+                }
+            }
+
+            &-label {
+                color: $silver;
+
+                @include tablet {
+                    width: 100%;
+                }
+            }
+        }
+
+
+
+        &-buttons {
+
+            @include tablet {
+                @include flex(null, row-reverse);
+                width: 100%;
+            }
+
+            &-publish {
+                @extend .button;
+                margin-bottom: 1.6rem;
+
+                @include tablet {
+                    margin: 0;
+                }
+
+                &-upload {
+                    @extend .button-submit;
+                    top: .9rem;
+
+                    &-icon {
+                        @extend .button-submit-icon;
+                    }
+                }
+            }
+
+            &-cancel {
+                @extend .button;
+                background-color: $white;
+                color: $brainflix-blue;
+                margin-bottom: 1.6rem;
+
+                &:hover {
+                    background-color: transparent;
+                }
+
+                @include tablet {
+                    margin: 0;
+                    margin-right: 2.4rem;
+                }
+            }
+        }
+
+    }
+}
