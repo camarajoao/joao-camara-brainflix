@@ -2,7 +2,7 @@ import "./NextVideosItem.scss";
 
 export default function NextVideosItem({ video, selectVideo }) {
     return (
-        <div className="nextVideosItem" onClick={() => { selectVideo(video.id) }}>
+        <div className="nextVideosItem" onClick={ selectVideo() }>
             <div className="nextVideosItem__hero">
                 <img className="nextVideosItem__image" src={video.image} alt="video-poster" />
             </div>
