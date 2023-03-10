@@ -1,4 +1,4 @@
-import "./_App.scss";
+import "./App.scss";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
