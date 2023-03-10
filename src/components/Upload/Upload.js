@@ -1,15 +1,23 @@
 import "./Upload.scss";
 import Thumbnail from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/icons/publish.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function UploadVideo() {
+
+    const navigate = useNavigate();
+    function toHomePage() {
+        alert("Upload successful")
+        navigate("/");
+    }
+
     return (
         <div className="upload">
             <div className="upload__title">
                 <h1 className="upload__title-content">Upload Video</h1>
             </div>
             <div>
-                <form className="upload__form">
+                <form onSubmit={() => toHomePage()} className="upload__form">
                     <div className="upload__form--desktop">
                         <div className="upload__form-thumbnail">
                             <label className="upload__form-thumbnail-label labels" htmlFor="thumbnail">VIDEO THUMBNAIL</label>

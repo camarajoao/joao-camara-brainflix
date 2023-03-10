@@ -2,7 +2,8 @@ import "./Header.scss";
 import brainFlixLogo from "../../assets/logo/BrainFlix-logo.svg";
 import searchIcon from "../../assets/icons/search.svg"
 import avatar from "../../assets/images/Mohan-muruge.jpg";
-import uploadIcon from "../../assets/icons/upload.svg"
+import uploadIcon from "../../assets/icons/upload.svg";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
@@ -19,7 +20,7 @@ export default function Header() {
             <div className="header__avatar">
                 <img src={avatar} className="header__avatar-image" alt="mohan muruge" />
             </div>
-            <button className="header__button" type="submit"><span className="header__button-submit"><img src={uploadIcon} className="header__button-submit-icon" alt="upload-icon" /></span>UPLOAD</button>
+            <Link to={"/upload"}><button className="header__button" type="submit"><span className="header__button-submit"><img src={uploadIcon} className="header__button-submit-icon" alt="upload-icon" /></span>UPLOAD</button></Link>
             <div className="header__avatar-extra">
                 <img src={avatar} className="header__avatar-image" alt="mohan muruge" />
             </div>

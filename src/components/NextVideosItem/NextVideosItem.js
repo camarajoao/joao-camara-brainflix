@@ -1,10 +1,10 @@
 import "./NextVideosItem.scss";
 
-export default function NextVideosItem({ video, selectVideo }) {
+export default function NextVideosItem({ video }) {
     return (
-        <div className="nextVideosItem" onClick={ selectVideo() }>
+        <div className="nextVideosItem">
             <div className="nextVideosItem__hero">
-                <img className="nextVideosItem__image" src={video.image} alt="video-poster" />
+                <img className="nextVideosItem__image" src={video.image} alt={video.title} />
             </div>
             <div className="nextVideosItem__description">
                 <h3>{video.title}</h3>
