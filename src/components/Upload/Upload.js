@@ -12,7 +12,7 @@ export default function UploadVideo() {
     }
 
     return (
-        <div className="upload">
+        <section className="upload">
             <div className="upload__title">
                 <h1 className="upload__title-content">Upload Video</h1>
             </div>
@@ -43,6 +43,6 @@ export default function UploadVideo() {
                 </form>
             </div>
             <div></div>
-        </div>
+        </section>
     )
 }

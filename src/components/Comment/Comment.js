@@ -9,7 +9,7 @@ export default function Comment({ comment }) {
     const timestamp = `${month}/${day}/${year}`;
 
     return (
-        <div className="comment">
+        <section className="comment">
             <div className="comment__avatar">
                 <img className="comment__avatar-image" />
                 {/* this image tag cannot receive an alt property or it breaks the style */}
@@ -23,6 +23,6 @@ export default function Comment({ comment }) {
                     <p className="comment__posted-content-text">{comment.comment}</p>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

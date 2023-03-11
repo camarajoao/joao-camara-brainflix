@@ -1,6 +1,26 @@
 @use "../../global.scss" as *;
 
-.nextVideos {
+.home__container {
+    @include desktop {
+        display: flex;
+        padding: 0 9.6rem;
+    }
+}
+
+.home__interaction {
+    @include desktop {
+        width: 70%;
+    }
+}
+
+.home__next-videos {
+    @include desktop {
+        border-left: .1rem solid $mercury;
+        width: 30%;
+    }
+}
+
+.next-videos {
     padding: 0 1.6rem;
 
     @include tablet {

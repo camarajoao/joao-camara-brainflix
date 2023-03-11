@@ -12,7 +12,7 @@ export default function Media({ selectedVideo }) {
 
 
     return (
-        <div className="media">
+        <section className="media">
             <div className="media__title">
                 <h1 className="media__title-content">{selectedVideo.title}</h1>
             </div>
@@ -41,6 +41,6 @@ export default function Media({ selectedVideo }) {
             <div className="media__description">
                 <p>{selectedVideo.description}</p>
             </div>
-        </div>
+        </section>
     )
 }

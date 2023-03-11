@@ -1,4 +1,4 @@
-import "../../components/NextVideos/NextVideos.scss"
+import "./Home.scss";
 
 import { Link, useParams } from "react-router-dom";
 
@@ -51,15 +51,15 @@ export default function Videos() {
     return (
         <>
             <VideoPlayer selectedVideo={selectedVideo} />
-            <div className="App__container">
-                <div className="App__Interaction">
+            <div className="home__container">
+                <div className="home__interaction">
                     <Media selectedVideo={selectedVideo} />
                     <Comments selectedVideo={selectedVideo} />
                 </div>
-                <div className="App__nextVideos">
-                    <div className="nextVideos">
-                        <h3 className="nextVideos__title">NEXT VIDEOS</h3>
-                        <nav className="nextVideos__container">
+                <div className="home__next-videos">
+                    <div className="next-videos">
+                        <h3 className="next-videos__title">NEXT VIDEOS</h3>
+                        <nav className="next-videos__container">
                             {filteredVideos.map((video) => (
                                 <Link to={`/videos/${video.id}`} key={video.id}>
                                     <NextVideosItem key={video.id} video={video} selectVideo={selectedVideo} />

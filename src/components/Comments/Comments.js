@@ -6,7 +6,7 @@ import Comment from "../Comment/Comment";
 export default function Comments({ selectedVideo }) {
 
     return (
-        <div className="comments">
+        <section className="comments">
             <h3 className="comments__count">{selectedVideo.comments.length} Comments</h3>
             <div className="comments__container">
                 <div className="comments__user">
@@ -27,6 +27,6 @@ export default function Comments({ selectedVideo }) {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
