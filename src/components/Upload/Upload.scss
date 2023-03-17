@@ -1,4 +1,4 @@
-@use "../../global.scss" as *;
+@use "../../styles/global" as *;
 
 .upload {
     @include flex(null, column);

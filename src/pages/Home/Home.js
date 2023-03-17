@@ -25,8 +25,9 @@ export default function Videos() {
     const [selectedVideo, setSelectedVideo] = useState(null);
 
     useEffect(() => {
-        axios.get(`https://project-2-api.herokuapp.com/videos/${keyAPI}`)
+        axios.get("http://localhost:8080/")
             .then((response) => {
+                console.log(response);
                 setVideoData(response.data);
             }).catch((error) => {
                 console.log(error);
@@ -35,7 +36,7 @@ export default function Videos() {
 
     useEffect(() => {
         if (!video) return;
-        axios.get(`https://project-2-api.herokuapp.com/videos/${video}/${keyAPI}`)
+        axios.get(`http://localhost:8080/videos/${video}`)
             .then((response) => {
                 setSelectedVideo(response.data);
             }).catch((error) => {

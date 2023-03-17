@@ -1,4 +1,4 @@
-@use './styles/partials/typography' as *;
+@use './partials/typography' as *;
 
 @mixin mobile {
     @media (min-width: 320px) {

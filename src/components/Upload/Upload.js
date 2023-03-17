@@ -2,14 +2,29 @@ import "./Upload.scss";
 import Thumbnail from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/icons/publish.svg";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useRef } from "react";
 
 export default function UploadVideo() {
 
     const navigate = useNavigate();
-    function toHomePage() {
-        alert("Upload successful")
-        navigate("/");
-    }
+    const formRef = useRef();
+
+    function formSubmit() {
+        const form = formRef.current;
+        const videoTitle = form.title.value;
+        const videoDescription = form.description.value;
+        console.log(videoTitle);
+
+        axios.post("http://localhost:8080/upload", {
+            title: videoTitle,
+            description: videoDescription
+        })
+            .then(alert("Upload successful"))
+            .then(navigate("/"))
+    };
+
+
 
     return (
         <section className="upload">
@@ -17,20 +32,34 @@ export default function UploadVideo() {
                 <h1 className="upload__title-content">Upload Video</h1>
             </div>
             <div>
-                <form onSubmit={() => toHomePage()} className="upload__form">
+                <form
+                    className="upload__form"
+                    onSubmit={formSubmit}
+                    ref={formRef}
+                >
                     <div className="upload__form--desktop">
                         <div className="upload__form-thumbnail">
                             <label className="upload__form-thumbnail-label labels" htmlFor="thumbnail">VIDEO THUMBNAIL</label>
-                            <img src={Thumbnail} className="upload__form-thumbnail-image" id="thumbnail" alt="video-thumbnail" />
+                            <img src="http://localhost:8080/Upload-video-preview.jpg" className="upload__form-thumbnail-image" id="thumbnail" alt="video-thumbnail" />
                         </div>
                         <div className="upload__form-details">
                             <div>
                                 <label className="upload__form-details-label labels" htmlFor="title">TITLE YOUR VIDEO</label>
-                                <input className="upload__form-details-input" name="title" id="title" placeholder="Add a title to your video" />
+                                <input
+                                    className="upload__form-details-input"
+                                    type="text"
+                                    name="title"
+                                    id="title"
+                                    placeholder="Add a title to your video" />
                             </div>
                             <div className="upload__form-details--flexgrow">
                                 <label className="upload__form-details-label labels" htmlFor="description">ADD A VIDEO DESCRIPTION</label>
-                                <textarea className="upload__form-details-textarea" name="description" id="description" placeholder="Add a description to your video"></textarea>
+                                <textarea
+                                    className="upload__form-details-textarea"
+                                    type="text"
+                                    name="description"
+                                    id="description"
+                                    placeholder="Add a description to your video"></textarea>
 
                             </div>
 
