@@ -27,7 +27,6 @@ export default function Videos() {
     useEffect(() => {
         axios.get("http://localhost:8080/")
             .then((response) => {
-                console.log(response);
                 setVideoData(response.data);
             }).catch((error) => {
                 console.log(error);

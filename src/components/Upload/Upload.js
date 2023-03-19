@@ -1,5 +1,4 @@
 import "./Upload.scss";
-import Thumbnail from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/icons/publish.svg";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -10,11 +9,12 @@ export default function UploadVideo() {
     const navigate = useNavigate();
     const formRef = useRef();
 
-    function formSubmit() {
+    function formSubmit(e) {
+        e.preventDefault();
+
         const form = formRef.current;
         const videoTitle = form.title.value;
         const videoDescription = form.description.value;
-        console.log(videoTitle);
 
         axios.post("http://localhost:8080/upload", {
             title: videoTitle,
@@ -34,7 +34,9 @@ export default function UploadVideo() {
             <div>
                 <form
                     className="upload__form"
-                    onSubmit={formSubmit}
+                    onSubmit={(e) => {
+                        formSubmit(e)
+                    }}
                     ref={formRef}
                 >
                     <div className="upload__form--desktop">
