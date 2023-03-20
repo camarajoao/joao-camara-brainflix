@@ -20,8 +20,10 @@ export default function UploadVideo() {
             title: videoTitle,
             description: videoDescription
         })
-            .then(alert("Upload successful"))
-            .then(navigate("/"))
+            .then(() => {
+                alert("Upload successful")
+                navigate("/")
+            });
     };
 
 
