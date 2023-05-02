@@ -10,7 +10,7 @@ Brainflix is my first project created using React framework. The main purpose of
 
 ## Screenshots
 
-![InStock Home Page](/camarajoao/InStock/blob/main/InStock-media/home_page-desktop.png)
+<img src="/media/home_page-tablet.png" width="500">
 
 
 ## Features
