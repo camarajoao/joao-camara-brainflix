@@ -1,70 +1,64 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Brainflix
 
-## Available Scripts
+Brainflix simulates a new video streaming platform. 
 
-In the project directory, you can run:
+The project is split into 3 parts (sprints of 1 week each). Mockups for this project are provided and the main objective of the project is to create a fully functional website. 
 
-### `npm start`
+Brainflix is my first project created using React framework. The main purpose of Brainflix is to familiarize myself with React, create a new project, install packages and create components.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+![InStock Home Page](/camarajoao/InStock/blob/main/InStock-media/home_page-desktop.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Sprint 1
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Side videos are clickable and upon selecting a video, the video section updates to display selected video including details and comments.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Sprint 2
 
-### `npm run eject`
+-	Clicking the BrainFlix Logo navigates the user back to the home page.
+-	Post comments on the video page.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Sprint 3
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-	Upload new video to API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Optimizations
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-	Mobile-first design approach. 
+-	Use responsive units (Em’s & Rem’s). 
+-	BEM methodology.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Lessons Learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+-	Practice using useEffect and useParams hooks to determine when to update the main-video data.
+-	Practice retrieving data from the provided API using axios.
+-   Axios to retrieve data from API.
+-	Build API service to manage video data and update the client application to use the API service.
+-	Practice using Postman for API testing.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Tech Stack
 
-### Deployment
+**Client:** React, SASS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Server:** Node.js, Express.js
+## Authors
 
-### `npm run build` fails to minify
+- [Joao Camara](https://github.com/camarajoao)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
